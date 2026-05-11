@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>閩南語第10冊 第4課 測驗</title>
+    <style>
+        body { font-family: "Microsoft JhengHei", Arial, sans-serif; background-color: #f0f4f8; padding: 20px; line-height: 1.6; }
+        .container { max-width: 850px; margin: auto; background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        .section { margin-bottom: 30px; border-left: 5px solid #3498db; padding-left: 15px; }
+        .section-title { font-weight: bold; font-size: 1.2em; color: #2980b9; margin-bottom: 15px; background: #eaf2f8; padding: 5px 10px; }
+        .question { margin-bottom: 18px; padding: 10px; border-radius: 5px; }
+        .question:hover { background-color: #f9f9f9; }
+        .score-display { text-align: center; font-size: 1.5em; font-weight: bold; color: #27ae60; margin-top: 20px; }
+        .lock-message { text-align: center; color: #c0392b; font-weight: bold; padding: 20px; border: 2px solid #e74c3c; border-radius: 8px; display: none; background: #fdf2f2; margin-bottom: 20px; }
+        button { display: block; width: 100%; padding: 15px; background: #27ae60; color: white; border: none; border-radius: 8px; font-size: 1.2em; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #219150; }
+        button:disabled { background: #bdc3c7; cursor: not-allowed; }
+        .ref-box { background: #fff9db; border: 1px solid #ffe066; padding: 10px; margin-bottom: 15px; border-radius: 5px; font-size: 0.9em; }
+        select { padding: 5px; font-size: 1em; border-radius: 4px; border: 1px solid #ccc; }
+        .options-label { margin-right: 15px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>閩南語第10冊 第4課〈氣象報導〉</h1>
+    
+    <div id="lockMessage" class="lock-message">
+        您已完成測驗。為維護公平，送出後 20 分鐘內不可重複測驗。<br>
+        剩餘等待時間：<span id="countdown">--:--</span>
+    </div>
+
+    <form id="quizForm">
+        <div class="section">
+            <div class="section-title">一、選擇題 (每題4分)</div>
+            <div class="question">1. 氣象報導提到超級颱風會從臺灣哪一個縣市登陸？<br>
+                <label class="options-label"><input type="radio" name="q1" value="1"> (1)花蓮</label>
+                <label class="options-label"><input type="radio" name="q1" value="2"> (2)基隆</label>
+                <label class="options-label"><input type="radio" name="q1" value="3"> (3)宜蘭</label>
+            </div>
+            <div class="question">2. 超級颱風會從哪一個縣市離開？<br>
+                <label class="options-label"><input type="radio" name="q2" value="1"> (1)宜蘭</label>
+                <label class="options-label"><input type="radio" name="q2" value="2"> (2)基隆</label>
+                <label class="options-label"><input type="radio" name="q2" value="3"> (3)花蓮</label>
+            </div>
+            <div class="question">3. 一家人得知颱風要來了，媽媽擔心什麼事？<br>
+                <label class="options-label"><input type="radio" name="q3" value="1"> (1)超市很多人買菜</label>
+                <label class="options-label"><input type="radio" name="q3" value="2"> (2)明天要不要上學</label>
+                <label class="options-label"><input type="radio" name="q3" value="3"> (3)大家相爭去菜市仔會買無菜</label>
+            </div>
+            <div class="question">4. 課文：「北部的觀眾朋友若有□□，愛特別細膩。」<br>
+                <label class="options-label"><input type="radio" name="q4" value="1"> (1)出外</label>
+                <label class="options-label"><input type="radio" name="q4" value="2"> (2)吩咐</label>
+                <label class="options-label"><input type="radio" name="q4" value="3"> (3)鬧熱</label>
+            </div>
+            <div class="question">5. 課文：「我干焦想欲知影，□□□免去學校？」<br>
+                <label class="options-label"><input type="radio" name="q5" value="1"> (1)好佳哉</label>
+                <label class="options-label"><input type="radio" name="q5" value="2"> (2)欲按怎</label>
+                <label class="options-label"><input type="radio" name="q5" value="3"> (3)敢會當</label>
+            </div>
+            <div class="question">6. 「阿母吩咐阿爸跤手著較緊咧！」意思為何？<br>
+                <label class="options-label"><input type="radio" name="q6" value="1"> (1)不要太緊張</label>
+                <label class="options-label"><input type="radio" name="q6" value="2"> (2)動作快一點</label>
+                <label class="options-label"><input type="radio" name="q6" value="3"> (3)手腳動作要小心</label>
+            </div>
+            <div class="question">7. 下面哪一個語詞，閩南語與國語的順序不可相反使用？<br>
+                <label class="options-label"><input type="radio" name="q7" value="1"> (1)風颱</label>
+                <label class="options-label"><input type="radio" name="q7" value="2"> (2)上北</label>
+                <label class="options-label"><input type="radio" name="q7" value="3"> (3)細膩</label>
+            </div>
+            <div class="question">8. 「塗跤真滑，你著□□□行。」<br>
+                <label class="options-label"><input type="radio" name="q8" value="1"> (1)沓沓仔</label>
+                <label class="options-label"><input type="radio" name="q8" value="2"> (2)敢會當</label>
+                <label class="options-label"><input type="radio" name="q8" value="3"> (3)鬥鬧熱</label>
+            </div>
+            <div class="question">9. 「好佳哉有你鬥相共，□□，這件代誌就辦袂成矣。」<br>
+                <label class="options-label"><input type="radio" name="q9" value="1"> (1)無地</label>
+                <label class="options-label"><input type="radio" name="q9" value="2"> (2)若無</label>
+                <label class="options-label"><input type="radio" name="q9" value="3"> (3)知影</label>
+            </div>
+            <div class="question">10. 「茶燒燒，若欲啉著愛□□。」<br>
+                <label class="options-label"><input type="radio" name="q10" value="1"> (1)相爭</label>
+                <label class="options-label"><input type="radio" name="q10" value="2"> (2)跤手</label>
+                <label class="options-label"><input type="radio" name="q10" value="3"> (3)細膩</label>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">二、詞義選擇 (每題4分)</div>
+            <div class="question">1. 你有話「沓沓仔」講就好。<br>
+                <select name="q11"><option value="">請選擇國語意思</option><option value="1">清楚的</option><option value="2">快一點</option><option value="3">慢慢地</option></select>
+            </div>
+            <div class="question">2. 咱來去「鬥鬧熱」。<br>
+                <select name="q12"><option value="">請選擇國語意思</option><option value="1">吵鬧</option><option value="2">湊熱鬧</option><option value="3">非常熱鬧</option></select>
+            </div>
+            <div class="question">3. 阿兄去超市買「四秀仔」。<br>
+                <select name="q13"><option value="">請選擇國語意思</option><option value="1">零食</option><option value="2">蔬菜</option><option value="3">水果</option></select>
+            </div>
+            <div class="question">4. 你敢「知影」伊的名？<br>
+                <select name="q14"><option value="">請選擇國語意思</option><option value="1">知覺</option><option value="2">知道</option><option value="3">熟悉</option></select>
+            </div>
+            <div class="question">5. 袂使「干焦」想欲靠別人。<br>
+                <select name="q15"><option value="">請選擇國語意思</option><option value="1">只是</option><option value="2">干擾</option><option value="3">要求</option></select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">三、縣市代號配合 (每題4分)</div>
+            <div class="ref-box">
+                A. Tâi-pak-tshī | B. Ke-lâng-tshī | C. Sin-pak-tshī | D. Tâi-tiong-tshī<br>
+                E. Gî-lân-tshī | F. Thô-hn̂g-tshī | G. Lâm-tâu-kuān | H. Sin-tik-kuān
+            </div>
+            <div class="question">
+                1. 宜蘭市：<select name="q16"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> 
+                2. 臺北市：<select name="q17"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> 
+                3. 臺中市：<select name="q18"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> 
+                4. 新竹縣：<select name="q19"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> <br><br>
+                5. 基隆市：<select name="q20"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> 
+                6. 南投縣：<select name="q21"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> 
+                7. 新北市：<select name="q22"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select> 
+                8. 桃園市：<select name="q23"><option value="">代號</option><option value="A">A</option><option value="B">B</option><option value="C">C</option><option value="D">D</option><option value="E">E</option><option value="F">F</option><option value="G">G</option><option value="H">H</option></select>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">四、拼音選擇 (每題4分)</div>
+            <div class="question">1. 「風」颱 的拼音？ <select name="q24"><option value="">請選擇</option><option value="hong">hong</option><option value="hònn">hònn</option><option value="ōm">ōm</option><option value="tō">tō</option><option value="ló">ló</option></select></div>
+            <div class="question">2. 「好」奇 的拼音？ <select name="q25"><option value="">請選擇</option><option value="hong">hong</option><option value="hònn">hònn</option><option value="ōm">ōm</option><option value="tō">tō</option><option value="ló">ló</option></select></div>
+            <div class="question">3. 真「茂」 的拼音？ <select name="q26"><option value="">請選擇</option><option value="hong">hong</option><option value="hònn">hònn</option><option value="ōm">ōm</option><option value="tō">tō</option><option value="ló">ló</option></select></div>
+            <div class="question">4. 報「導」 的拼音？ <select name="q27"><option value="">請選擇</option><option value="hong">hong</option><option value="hònn">hònn</option><option value="ōm">ōm</option><option value="tō">tō</option><option value="ló">ló</option></select></div>
+            <div class="question">5. 煩「惱」 的拼音？ <select name="q28"><option value="">請選擇</option><option value="hong">hong</option><option value="hònn">hònn</option><option value="ōm">ōm</option><option value="tō">tō</option><option value="ló">ló</option></select></div>
+        </div>
+
+        <button type="button" id="submitBtn" onclick="calculateScore()">交卷並統計總分</button>
+    </form>
+
+    <div id="result" class="score-display"></div>
+</div>
+
+<script>
+    const LOCK_MINUTES = 20;
+    const STORAGE_KEY = 'minnan_l4_lock';
+
+    window.onload = function() {
+        checkLockStatus();
+        setInterval(checkLockStatus, 1000);
+    };
+
+    function checkLockStatus() {
+        const lockTime = localStorage.getItem(STORAGE_KEY);
+        if (lockTime) {
+            const now = new Date().getTime();
+            const diff = now - parseInt(lockTime);
+            const remaining = (LOCK_MINUTES * 60 * 1000) - diff;
+
+            if (remaining > 0) {
+                document.getElementById('quizForm').style.opacity = "0.4";
+                document.getElementById('submitBtn').disabled = true;
+                document.getElementById('lockMessage').style.display = "block";
+                
+                const m = Math.floor(remaining / 60000);
+                const s = Math.floor((remaining % 60000) / 1000);
+                document.getElementById('countdown').innerText = `${m}:${s < 10 ? '0' : ''}${s}`;
+            } else {
+                localStorage.removeItem(STORAGE_KEY);
+                location.reload();
+            }
+        }
+    }
+
+    function calculateScore() {
+        const answers = {
+            q1: "1", q2: "2", q3: "3", q4: "1", q5: "3", q6: "2", q7: "3", q8: "1", q9: "2", q10: "3",
+            q11: "3", q12: "2", q13: "1", q14: "2", q15: "1",
+            q16: "E", q17: "A", q18: "D", q19: "H", q20: "B", q21: "G", q22: "C", q23: "F",
+            q24: "hong", q25: "hònn", q26: "ōm", q27: "tō", q28: "ló"
+        };
+
+        let score = 0;
+        const form = document.getElementById('quizForm');
+        const formData = new FormData(form);
+
+        for (let key in answers) {
+            if (formData.get(key) === answers[key]) {
+                score += 4;
+            }
+        }
+
+        const maxScore = Object.keys(answers).length * 4;
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = `您的總分是：${score} / ${maxScore}`;
+        
+        localStorage.setItem(STORAGE_KEY, new Date().getTime().toString());
+        alert(`測驗已送出！得分：${score}。網頁將鎖定 ${LOCK_MINUTES} 分鐘。`);
+        checkLockStatus();
+    }
+</script>
+
+</body>
+</html>
